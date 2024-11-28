@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: blanchedalmond;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            padding: 20px;
+            border-radius: 16px;
+            background-color: white;
+            text-align: center;
+        }
+        .container h2{
+            margin-bottom: 16px;
+        }
+        .number{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .number input{
+            padding: 10px 4px;
+            border-radius: 8px;
+            border: 1px solid grey;
+        }
+        .from-to{
+            margin-block: 32px;
+           display: inline-flex;
+           align-items: center;
+           gap: 22px;
+        }
+        .from-to label{
+            display: inline-flex;
+            flex-direction: column;
+            font-size: 20px;
+        }
+        .flags{
+            border-radius: 6px;
+            border: 1px solid grey;
+            display: flex;
+           align-items: center;
+           justify-content: center;
+           overflow: hidden;
+        }
+        .flags img{
+            max-width: 40px;
+        }
+        .from-to label select{
+            padding: 12px 20px;
+            border: none;
+            outline: none;
+        }
+        button{
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: white;
+    background-color: purple;
+    border: none;
+    margin-block: 16px;
+    cursor: pointer;
+        }
+        button:active{
+            background-color: rgba(128, 0, 128, 0.788);
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <label class="number" for="num">Enter Amount
+            <input type="number" name="" id="num" value="1">
+        </label>
+        <div class="from-to">
+            <label for="from">From
+                <div class="flags">
+                <img src="https://flagsapi.com/PK/flat/64.png" alt="">
+                <select name="from" id="from">
+                </select>
+                </div>
+            </label>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <label for="to">To
+                <div class="flags">
+                    <img src="https://flagsapi.com/US/flat/64.png" alt="">
+                    <select name="to" id="to">
+                    </select>
+                    </div>
+            </label>
+        </div>
+        
+        <div class="calculated-val">
+            <p></p>
+        </div>
+        <button type="submit">Get Exchange Rate</button>
+    </div>
+</body>
+</html>
